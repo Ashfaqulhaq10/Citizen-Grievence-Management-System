@@ -1,0 +1,111 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 20% 15%;
+
+    /* Government style palette: deep blue primary, saffron accent */
+    --primary: 224 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 95% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 45%;
+
+    --accent: 30 95% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 268 83% 47%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 230 20% 15%;
+    --sidebar-primary: 268 83% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 82% 52%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 13% 90%;
+    --sidebar-ring: 199 89% 48%;
+  }
+
+  .dark {
+    --background: 240 21% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 21% 14%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 21% 14%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 268 83% 65%;
+    --primary-foreground: 240 21% 12%;
+
+    --secondary: 199 89% 60%;
+    --secondary-foreground: 240 21% 12%;
+
+    --muted: 240 16% 18%;
+    --muted-foreground: 240 6% 70%;
+
+    --accent: 340 82% 62%;
+    --accent-foreground: 240 21% 12%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 16% 22%;
+    --input: 240 16% 22%;
+    --ring: 268 83% 65%;
+
+    --sidebar-background: 240 21% 12%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 268 83% 65%;
+    --sidebar-primary-foreground: 240 21% 12%;
+    --sidebar-accent: 340 82% 62%;
+    --sidebar-accent-foreground: 240 21% 12%;
+    --sidebar-border: 240 16% 22%;
+    --sidebar-ring: 199 89% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-semibold;
+    font-family: "Inter", "Noto Sans Tamil", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    background-image: url('https://cdn.builder.io/api/v1/image/assets%2F9db4770a5f0e4b70b6467860da03dfe8%2F5bcbe20fa57447cd877f7031265c26ce?format=webp&width=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color-scheme: light;
+  }
+}
